@@ -1,0 +1,13 @@
+import BlogPost from "./BlogPost.jsx";
+function BlogPosts ({posts}) {
+    const renderedPosts = posts.map((post) => {
+        return <BlogPost post={post} key={post.id} />
+    });
+    return(
+        <div className="blog-posts">
+            {renderedPosts}
+        </div>
+    );
+}
+
+export default BlogPosts;
