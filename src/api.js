@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getPosts = async () => {
-    const response = await axios.get('https://strapi-3nhz.onrender.com/api/posts', {
+    const response = await axios.get('/api/posts', {
         headers: {
             Authorization: 'bearer ' + import.meta.env.PROD_API_SECRET
         }
