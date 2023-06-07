@@ -19,10 +19,6 @@ function App() {
     return (
         <div>
             <BlogPosts posts={posts}/>
-            <div>
-                {import.meta.env.VITE_TEST_VAR}<br/>
-                {import.meta.env.BASE_URL}
-            </div>
         </div>
     );
 }
