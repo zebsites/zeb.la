@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const getPosts = async () => {
-    const response = await axios.get('http://localhost:1337/api/posts', {
+    const response = await axios.get('https://strapi-3nhz.onrender.com/api/posts', {
         headers: {
-            Authorization: 'bearer ded772b9b9d8034d2c95754e629acbd8233b55bf4baf672d1bea7eb4404e9bc9e0b68bf46171c2be5e15382a02a025794d9d89421bafd0c0ab3250ade2d88051ef4ef650108bc7b2be60fb4edf6655bb91f22f14fc95297a7537fb519126484b5289488d7dcc5f78a7f28cb18780f508bb7a5bb25baf1b123eefa59d94820472'
+            Authorization: 'bearer bb70131e9ec9b24d30be13c118f80dee0749335e8e3218f7b7a5340c21870e87d0a3363bbee5390c2f52dd99bbc334ed64027b0c062f52874aa340516ee85c562402f6c5596b84190e72e86563f4a25eef2acca13f7f1d0890af43f639c774024ca773a55236e007a9c13c0763a1a320455c52de2593a9271ad3c40b3a26a5d3'
         }
     });
     return response.data.data;
