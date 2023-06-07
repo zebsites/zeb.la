@@ -9,17 +9,21 @@ import {useEffect} from "react";
 function App() {
     const [posts, setPosts] = useState([]);
     const loadPosts = async () => {
-       const result = await getPosts();
+        const result = await getPosts();
         setPosts(result)
     }
-    useEffect(()=> {
+    useEffect(() => {
         loadPosts();
-    } ,[])
+    }, [])
 
     return (
-       <div>
-           <BlogPosts posts={posts} />
-       </div>
+        <div>
+            <BlogPosts posts={posts}/>
+            <div>
+                {import.meta.env.VITE_TEST_VAR}<br/>
+                {import.meta.env.BASE_URL}
+            </div>
+        </div>
     );
 }
 
