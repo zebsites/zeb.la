@@ -1,13 +1,9 @@
 import axios from 'axios';
 
-const getPosts = async () => {
-    const response = await axios.get('https://strapi-3nhz.onrender.com/api/posts', {
-        headers: {
-            Authorization: 'bearer ' + import.meta.env.VITE_API_SECRET
-        }
-    });
+const callApi = async (route) => {
+    const response = await axios.get('http://localhost:5001/');
     return response.data.data;
 
 };
 
-export default getPosts;
+export default callApi;
