@@ -1,25 +1,39 @@
 import {useState} from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import getPosts from './api.js';
-import BlogPosts from './components/BlogPosts';
 import {useEffect} from "react";
+import BlogPosts from './components/BlogPosts';
+import Header from "./components/Header.jsx";
+import callApi from "./api.js";
+import axios from "axios";
+import './fonts.css';
+import './App.css';
 
 function App() {
     const [posts, setPosts] = useState([]);
-    const loadPosts = async () => {
-        const result = await getPosts();
+    /*const loadPosts = async () => {
+        const result = await callApi('posts');
         setPosts(result)
-    }
+    }*/
     useEffect(() => {
-        loadPosts();
+        // loadPosts();
+        const options = {
+            method: 'GET',
+            url: 'http://localhost:5001/posts'
+        }
+        axios.request(options).then((response) => {
+            setPosts(response.data);
+        }).catch((error) => {
+            console.error(error);
+        })
+
     }, [])
 
     return (
-        <div>
-            <BlogPosts posts={posts}/>
-        </div>
+        <>
+            <Header/>
+            <main id="main" className="main">
+                <BlogPosts posts={posts}/>
+            </main>
+        </>
     );
 }
 

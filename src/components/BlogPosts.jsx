@@ -1,4 +1,5 @@
 import BlogPost from "./BlogPost.jsx";
+import '../assets/BlogPosts.css';
 function BlogPosts ({posts}) {
     const renderedPosts = posts.map((post) => {
         return <BlogPost post={post} key={post.id} />
