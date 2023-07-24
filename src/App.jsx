@@ -9,18 +9,14 @@ import './App.css';
 
 function App() {
     const [posts, setPosts] = useState([]);
-    /*const loadPosts = async () => {
-        const result = await callApi('posts');
-        setPosts(result)
-    }*/
     useEffect(() => {
-        // loadPosts();
         const options = {
             method: 'GET',
-            url: 'http://localhost:5001/posts'
+            url: './api/posts'
         }
         axios.request(options).then((response) => {
-            setPosts(response.data);
+            console.log(response.data)
+            setPosts(response.data.data);
         }).catch((error) => {
             console.error(error);
         })
