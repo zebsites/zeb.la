@@ -174,3 +174,8 @@
   visibility: visible;
   clip-path: circle(50%);
 }
+
+.photos-container img {
+  max-height:60vh;
+}
+

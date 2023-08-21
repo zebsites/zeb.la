@@ -2,9 +2,9 @@ import Image from "./Image.jsx";
 
 export default function Photos () {
     return (
-        <section>
+        <div className="photos-container">
             <p>Photos</p>
-            {Image({src: 'https://miro.medium.com/v2/resize:fit:1400/1*Nf4aJCyqn1qxBe-FDAW6Aw.png', alt:'hi'})}
-        </section>
+            {Image({src: '/photography/los-feliz-3.jpg', alt: 'Palm Tree in Los Feliz'})}
+        </div>
     )
 }
