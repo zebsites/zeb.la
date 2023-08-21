@@ -156,7 +156,7 @@
   content: '';
   width: 120px;
   height: 120px;
-  background: url('zeb-profile.jpg') no-repeat center/contain;
+  background: url('assets/zeb-profile.jpg') no-repeat center/contain;
   display: block;
   position: absolute;
   border-radius: 100%;
